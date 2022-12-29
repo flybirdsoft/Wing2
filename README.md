@@ -11,7 +11,7 @@ Wing.js and project design & write by Wuweiwei(邬畏畏)
 node-basis安装：
 
 	* 1.> npm i node-basis
-	* 2.打开 node_modules 文件夹 -> node-basis文件夹 -> 加压 basisApp.zip ,把basisApp文件夹里的app.js复制到根目录
+	* 2.打开 node_modules 文件夹 -> node-basis文件夹 -> 解压 basisApp.zip ,把basisApp文件夹里的app.js复制到根目录
 	* 3.> node app.js
 
 ### Wing.js 的理念：
