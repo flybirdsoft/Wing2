@@ -1,6 +1,7 @@
 /*
 write by wuweiwei
 Wing.js is write by wweiwei
+
 */
 (function(win){
 	var $ID = function(id){
