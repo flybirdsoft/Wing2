@@ -19,7 +19,7 @@ Wing.js version2 is SPA for front-end framework
 		routes:[
 			{
 				url:"/index",
-				controller:"Index",
+				controller:"Index",  /*与controller()第一个参数对应*/
 				templateUrl:"tpls/AppIndex.html", /*载入模板到container指定的DOM里*/
 				js:"/App/App.Index.js"
 			},
@@ -37,10 +37,62 @@ Wing.js version2 is SPA for front-end framework
 
 	wR.config(routerCfg);
   
- 	wR.controller("Index",function(args){
+ 	wR.controller("Index",function(args){ /*与routerCfg routes controller 属性对应*/
 		App.Index.init(args);
 		console.log(this.location);/* this is location object*/
 	});
   
   
+  ### 模板渲染
   
+     	 <!--模板 begin-->  
+	    <div id="myList" class="app-myapp fl {{bgcolor}}" title="{{title}}" style="position:relative;">
+		<div class="app-myapp-shared">{{numbers.app.count}}</div>
+		<div class="app-myapp-photo icons"></div>
+		<div class="app-myapp-caption">{{title}}</div>
+		<div>{{dataList}}</div>
+		<div class="app-myapp-op">
+		    <a target="_blank" href="http://{{url}}">{{url}}</a>
+		</div>
+	    </div>
+   	 <!--模板 end-->  
+    
+	this.viewModel = new Wing.wTemplate({
+	    repeatElement : document.querySelector("#myList"),
+	    data : this.data,
+	    beforeCreate : function(){
+		//console.log("beforeCreate");
+	    },
+	    created : function(){
+		//console.log("created");
+	    },
+	    mounted:function(){
+		//数据渲染完毕，可以处理DOM或绑定事件
+		/*
+		$("#desk").on("click",".app-create",function(){
+		    alert("你想创建增值服务吗");
+		});
+		*/
+	    },
+	    stateChange:function(item){
+		//console.log(item);
+	    },
+	    render:function(object){
+		var item = object.item;   // object.item is data
+		var index = object.index; // object.index is index of array
+
+		return {
+		    "bgcolor" : index==1 ? "odd" : "even",
+		    "numbers.app.count" : item.numbers.app.count+"(个)",
+		    "dataList" : `
+			<div>
+			    <span>${item.list[0].b.c}</span>
+			    <br/>
+			    <i>list count:<span style="color:#F00;">${item.list.length}</span></i>
+			    <i>|${ !!item.list[3] ? item.list[3] : "" }</i>
+			    <i style="color:#00F;">(${ item.list[1] })</i>
+			</div>
+			`,
+		}
+	    }
+	});
