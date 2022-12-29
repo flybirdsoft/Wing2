@@ -45,6 +45,7 @@ Wing.js version2 is SPA for front-end framework
   
   ### 模板渲染
   
+  
      	 <!--模板 begin-->  
 	    <div id="myList" class="app-myapp fl {{bgcolor}}" title="{{title}}" style="position:relative;">
 		<div class="app-myapp-shared">{{numbers.app.count}}</div>
@@ -56,10 +57,53 @@ Wing.js version2 is SPA for front-end framework
 		</div>
 	    </div>
    	 <!--模板 end-->  
-    
+
+var data = [
+	    {
+		title:"我的应用1",
+		url:"www.cnblogs.com/wsoft1",
+		numbers:
+		{
+		    app:{count:"10"}
+		},
+		//list:["1","2","3"]
+		list:[{"a":"111","b":{"c":"ccc"}},"5","6"]
+	    },
+	    {
+		title:"我的应用2",
+		url:"www.cnblogs.com/wsoft2",
+		numbers:
+		{
+		    app:{count:"11"}
+		},
+		list:[{"a":"111","b":{"c":"ccc"}},"5","6"]
+	    },
+	    {
+		title:"我的应用2",
+		url:"www.cnblogs.com/wsoft2",
+		numbers:
+		{
+		    app:{count:"12"}
+		},
+		//list:["7","8","9"]
+		list:[{"a":"111","b":{"c":"ccc"}},"5","6"]
+	    },
+	    {
+		title:"我的应用3",
+		url:"www.cnblogs.com/wsoft3",
+		numbers:
+		{
+		    app:{count:"13"}
+		},
+		//list:["10","11","12"]
+		list:[{"a":"111","b":{"c":"ccc"}},"5","6"]
+	    }
+	];
+
+
 	this.viewModel = new Wing.wTemplate({
 	    repeatElement : document.querySelector("#myList"),
-	    data : this.data,
+	    data : data,
 	    beforeCreate : function(){
 		//console.log("beforeCreate");
 	    },
