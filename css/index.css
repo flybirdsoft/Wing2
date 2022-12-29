@@ -1,0 +1,87 @@
+/*
+write by wuweiwei
+date:2022-10;
+*/
+
+html,body{
+	font-size: 12px;
+	height: 100%;
+	padding:0;
+	margin:0;
+}
+dl,dd,dt{
+	padding: 0;
+	margin:0;
+}
+a{
+	color: #FFF;
+}
+.mainTop{
+	height: 80px;
+	line-height: 80px;
+	background-color: #6f90bd;
+	color: #FFF;
+	font-weight: bold;
+	font-size:26px;
+}
+.mainTop-side{
+	height: 100%;
+	/*width:260px;*/
+	/*background-color: #75d54a;*/
+	float: left;
+}
+.mainContent{
+	position: relative;
+	height: 100%;
+	background-color: #FFF;
+	overflow: auto;
+}
+.mainSide{
+	width:260px;
+	position: absolute;
+	top:80px;
+	bottom:0px;
+	left:0;
+	background-color: #585a81;
+}
+.mainSide dl.mainMenu dd,.mainSide dl.mainMenu dt{
+	height: 60px;
+	line-height: 60px;
+	padding-left:20px;
+	padding-right:20px;
+	color:#FFF;
+}
+.mainSide dl.mainMenu dd.select{
+	background-color: #484766;
+}
+.mainSide dl.mainMenu dd:hover{
+	background-color: #515081;
+}
+.main{
+	overflow: auto;
+	left:260px;
+	position: absolute;
+	bottom:0;
+	right: 0;
+	top:80px;
+	padding:5px;
+}
+.mainMenu a{
+	font-size: 16px;
+	display: block;
+}
+
+.button-bigBlue{
+	padding-top: 10px;
+	padding-bottom:10px;
+	padding-left:5px;
+	padding-right: 5px;
+	border: none;
+	border-radius:4px;
+	background-color: #549bdf;
+	color:#FFF;
+	cursor: pointer;
+}
+.button-bigBlue:hover{
+	background-color: #58a2e9;
+}

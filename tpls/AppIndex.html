@@ -1,0 +1,40 @@
+<style type="text/css">
+    .tips{
+        clear:both;
+        color:#00f;
+        line-height: 30px;
+    }
+</style>
+<div class="optionsBox">
+    <button id="btn_data" class="button-bigBlue">修改数据(数据驱动)</button>
+    <button id="btn_setData" class="button-bigBlue">修改数据(数据驱动)</button>
+</div>
+
+<div id="desk" class="desk">
+    <div class="app-create fl">
+        <div class="app-create-hline"></div>
+        <div class="app-create-vline"></div>
+        <div class="app-create-text">新增基础服务</div>
+    </div>
+    <!--模板 begin-->  
+    <div id="myList" class="app-myapp fl {{bgcolor}}" title="{{title}}" style="position:relative;">
+        <div class="app-myapp-shared">{{numbers.app.count}}</div>
+        <div class="app-myapp-photo icons"></div>
+        <div class="app-myapp-caption">{{title}}</div>
+        <div>{{dataList}}</div>
+        <div class="app-myapp-op">
+            <a target="_blank" href="http://{{url}}">{{url}}</a>
+        </div>
+    </div>
+    <!--模板 end-->  
+    <div class="tips">
+        wing.js单页应用框架 无需安装babel即可轻松实现开发<br/>
+        wing.js理念是：无需过度引入第单方依赖库也无需实时本地编译<br/>框架研发作者：邬畏畏
+        <hr/>
+        wing.js相关文档参考 <a target="_blank" href="http://www.flybirdsoft.com" style="color:#F0F;">http://www.flybirdsoft.com</a>
+        <br/>
+        github: <a style="color:#F0F;" target="_blank" href="http://www.github.com/flybirdsoft">http://www.github.com/flybirdsoft</a>
+    </div>
+</div>
+
+

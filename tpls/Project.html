@@ -1,0 +1,47 @@
+<style type="text/css">
+	.projectModule{
+		font-size: 16px;
+		color:#00f;
+	}
+	.projectModule h2{
+		float:left;
+		width:280px;
+		height:260px;
+		border:1px solid #CCC;
+		margin-left:30px;
+		background-color: #eee;
+	}
+</style>
+<div class="projectModule">
+    <h1>This is your second page.</h1>
+    <div id="param">
+	    <h3>
+	        router: #/project/ <span id="router_action"></span>
+	    </h3>
+	    <h3>
+	    	wRouter对象.location:<span id="router_location"></span>
+	    </h3>
+	</div>
+    <hr style="margin-bottom:10px;" />
+    <div>
+	    <div class="optionsBox">
+	        <button id="btn_add" class="button-bigBlue">增加数据</button>
+	        <button id="btn_delete" class="button-bigBlue">删除数据</button>
+	    </div>
+
+	    <div id="desk" class="desk">
+	        <div class="app-create fl">
+	            <div class="app-create-hline"></div>
+	            <div class="app-create-vline"></div>
+	            <div class="app-create-text">新增基础服务</div>
+	        </div>
+		    <!--模板 begin--> 
+	        <div id="templateDom">
+	            {{component}}
+	        </div>
+
+		    <!--模板 end-->  
+	        <h2 style="">Wing.js</h2>
+	    </div>
+    </div>
+</div>
