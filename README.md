@@ -43,7 +43,7 @@ Wing.js version2 is SPA for front-end framework
 	});
   
   
-  ### 模板渲染
+  ### 模板渲染示例 1
   
   
      	 <!--模板 begin-->  
@@ -140,3 +140,81 @@ Wing.js version2 is SPA for front-end framework
 		}
 	    }
 	});
+
+### Wing.js模板渲染示例2
+
+	<!--模板 begin--> 
+	<div id="templateDom">
+	{{component}}
+	</div>
+
+	<!--模板 end-->  
+
+	var data = {
+	    result:[
+	        {
+	            title:"我的应用1",
+	            url:"www.cnblogs.com/wsoft1",
+	            numbers:
+	            {
+	                app:{count:"100"}
+	            },
+	            //list:["1","2","3"]
+	            list:[{"a":"111","b":{"c":"ccc"}},"5","6"]
+	        },
+	        {
+	            title:"我的应用2",
+	            url:"www.cnblogs.com/wsoft2",
+	            numbers:
+	            {
+	                app:{count:"100"}
+	            },
+	            list:[{"a":"111","b":{"c":"ccc"}},"5","6"]
+	        },
+	        {
+	            title:"我的应用2",
+	            url:"www.cnblogs.com/wsoft2",
+	            numbers:
+	            {
+	                app:{count:"100"}
+	            },
+	            //list:["7","8","9"]
+	            list:[{"a":"111","b":{"c":"ccc"}},"5","6"]
+	        },
+	        {
+	            title:"我的应用3",
+	            url:"www.cnblogs.com/wsoft3",
+	            numbers:
+	            {
+	                app:{count:"100"}
+	            },
+	            //list:["10","11","12"]
+	            list:[{"a":"111","b":{"c":"ccc"}},"5","6"]
+	        }
+	    ]
+	}
+	
+	
+	var template = new Wing.wTemplate({
+	    repeatElement : document.querySelector("#templateDom"),
+	    data : data,
+	    render:function(object){
+		var data = object.item;
+		return {
+		    "component":`
+			<div>
+			    ${
+				data.result.map(function(obj){
+				    return (`<div class="app-myapp fl {{bgcolor}}" title="{{title}}">
+						<div class="app-myapp-shared">${obj.numbers.app.count}</div>
+						<div class="app-myapp-photo icons"></div>
+						<div class="app-myapp-caption">${obj.title}</div>
+					    </div>`)
+				})
+			    }
+			</div>`,
+		}
+	    }
+	});
+
+		    
