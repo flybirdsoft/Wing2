@@ -1,5 +1,7 @@
 # Wing2
-Wing.js version2 is SPA for front-end framework
+Wing.js version2 is SPA for front-end framework.
+Design & write by wuweiwei(邬畏畏)
+
 
 ### Wing.js 的理念：
 
