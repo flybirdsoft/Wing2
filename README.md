@@ -1,7 +1,7 @@
 # Wing2
 Wing.js version2 is SPA for front-end framework.
 
-$\color{rgb(0,0,c)}Design & write by wuweiwei(邬畏畏)$
+Design & write by wuweiwei(邬畏畏)
 
 
 ### Wing.js 的理念：
