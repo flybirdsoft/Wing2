@@ -1,7 +1,6 @@
 /*
 write by wuweiwei
 Wing.js is write by wweiwei
-
 */
 (function(win){
 	var $ID = function(id){
@@ -38,7 +37,13 @@ Wing.js is write by wweiwei
 				controller:"project",
 				templateUrl:"/tpls/Project.html",
 				js:"/App/App.Project.js"
-			}
+			},
+			{
+				url:"/details",
+				controller:"details",
+				templateUrl:"/tpls/Details.html",
+				js:"/App/App.Details.js"
+			},
 		],
 		otherwise:{
 			redirectTo:"/index"
@@ -57,6 +62,9 @@ Wing.js is write by wweiwei
 		*/
 		App.Project.init(args);
 	});
+	wR.controller("details",function(args){
+		App.Details.init(args);
+	});
 	wR.commonController(function(isFirst){
 		console.log(this.location.action);
 
@@ -69,6 +77,10 @@ Wing.js is write by wweiwei
 		else if(this.location.action.indexOf("project")>-1)
 		{
 			mainMenuItem[1].className = "select";
+		}
+		else if(this.location.action.indexOf("details")>-1)
+		{
+			mainMenuItem[2].className = "select";
 		}
 		mainMenu.onclick = function(e){
 			let target = e.target;

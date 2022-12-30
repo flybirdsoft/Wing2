@@ -1,0 +1,79 @@
+<style type="text/css">
+	.detailsModule{
+		font-size: 16px;
+	}
+	.detailsModule .cardBox{
+		overflow: hidden;
+		padding:10px;
+	}
+	.detailsModule .cardBox .card{
+		width:300px;
+		height: 200px;
+		border:1px solid #ccc;
+		float:left;
+		margin-right: 43px;
+		overflow: hidden;
+		padding:5px;
+	}
+	.detailsModule .cardBox .card dt{
+		font-size:20px;
+		font-weight: bold;
+		color:#00f;
+		height: 40px;
+		line-height: 40px;
+	}
+	.detailsModule .listBox{
+		overflow: hidden;
+		padding:10px;
+	}
+	.detailsModule .list{
+		width:1020px;
+		border:1px solid #ccc;
+	}
+	.detailsModule .listBox dt{
+		height: 40px;
+		line-height: 40px;
+		background-color: #ddd;
+	}
+	.detailsModule .listBox span{
+		display: inline-block;
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.detailsModule .listBox dd:hover{
+		background-color: #efefef;
+	}
+	.odd{
+		background-color: #e7e7e7;
+	}
+
+</style>
+<div class="detailsModule">
+    <h1>This is your Details page.</h1>
+    <div class="cardBox">
+	    <dl class="card" id="card">
+	    	<dt>{{company}}</dt>
+	    	<dd>{{introduction}}</dd>
+	    </dl>
+    </div>
+
+    <div class="listBox">
+    	<dl id="list" class="list">
+    		<dt>
+    			<span>姓名</span>
+    			<span>年龄</span>
+    			<span>性别</span>
+    			<span>籍贯</span>
+    			<span>email</span>
+    		</dt>
+    		<dd id="listItem" class="{{bgColor}}">
+    			<span>{{name}}</span>
+    			<span>{{age}}</span>
+    			<span>{{sex}}</span>
+    			<span>{{jiguan}}</span>
+    			<span>{{email}}</span>
+       		</dd>
+    	</dl>
+    </div>
+</div>
